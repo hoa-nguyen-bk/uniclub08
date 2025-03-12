@@ -15,7 +15,10 @@ public class AuthenticationServicesImp implements AuthenticationService {
 
     @Override
     public boolean authenticate(String username, String password){
-        Optional<User> user = userRepository.findByUsernameAndPassword(username, password);
-        return false;
+        Optional<User> userOptional = userRepository.findByUsernameAndPassword(username, password);
+//        if(userOptional.isPresent()){
+//            userOptional.get().getFullname();
+//        }
+        return userOptional.isPresent();
     }
 }
