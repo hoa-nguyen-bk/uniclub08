@@ -11,3 +11,6 @@ spring:
       ddl-auto: none
     properties:
       hibernate.transaction.jta.platform: org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform
+
+jwt:
+  secret: bTYE4HJo2KZYoFqPHxBRwNlriOkbecBnQNs4jEvwmDQ=
