@@ -23,6 +23,8 @@ public class AuthenticationServicesImp implements AuthenticationService {
 
     @Override
     public String authenticate(String username, String password) {
+        String data = jwtHelper.decodeToken("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZWwifQ.ljOQDEd_P88q2XMtORnNqmdxIbTkoEAqjQ75WUNhCTE");
+        System.out.println("data = "+data);
         String token = "";
         Optional<User> userOptional = userRepository.findByUsername(username);
         if(userOptional.isPresent()){
