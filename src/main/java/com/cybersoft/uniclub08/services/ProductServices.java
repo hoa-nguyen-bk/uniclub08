@@ -1,9 +1,12 @@
 package com.cybersoft.uniclub08.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.cybersoft.uniclub08.dto.ProductDTO;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 public interface ProductServices {
-//    @Autowired
-//    private FileServices fileServices;
+//    void insertProduct(MultipartFile file,String name, String desc, double price, int idSize, int idColor, int quantity);
+    List<ProductDTO> getAllProducts(int pageNumber, int pageSize);
 
 }
